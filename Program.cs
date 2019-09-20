@@ -15,38 +15,79 @@ namespace ConsoleApp3
         {
             switch (choice)
             {
-                case 1: return arr[0];
-                case 2: return arr[1];
-                case 3: return arr[2];
-                case 4: return arr[3];
-                case 5: return arr[4];
-                case 6: return arr[5];
-                case 7: return arr[6];
-                case 8: return arr[7];
-                case 9: return arr[8];
-                default: Console.Write("Error!");
+                case 1:
+                    return arr[0];
+                case 2:
+                    return arr[1];
+                case 3:
+                    return arr[2];
+                case 4:
+                    return arr[3];
+                case 5:
+                    return arr[4];
+                case 6:
+                    return arr[5];
+                case 7:
+                    return arr[6];
+                case 8:
+                    return arr[7];
+                case 9:
+                    return arr[8];
+                default:
+                    { 
+                    Console.Write("Error!!!");
                     return '-';
+                    }
             }
         }
 
         static void movement(int player, char[] arr)
         {
-            int choice;
-            choice=Console.Read();
+            string a = Console.ReadLine();
+            int choice = System.Convert.ToInt32(a);
             while (Move_checker(choice, arr) == 'X' || Move_checker(choice, arr) == '0')
                 Console.WriteLine("This cell is occupy!\n");
             switch (choice)
             {
-                case 1: if (player == 1) arr[0] = 'X'; else arr[0] = '0'; break;
-                case 2: if (player == 1) arr[1] = 'X'; else arr[1] = '0'; break;
-                case 3: if (player == 1) arr[2] = 'X'; else arr[2] = '0'; break;
-                case 4: if (player == 1) arr[3] = 'X'; else arr[3] = '0'; break;
-                case 5: if (player == 1) arr[4] = 'X'; else arr[4] = '0'; break;
-                case 6: if (player == 1) arr[5] = 'X'; else arr[5] = '0'; break;
-                case 7: if (player == 1) arr[6] = 'X'; else arr[6] = '0'; break;
-                case 8: if (player == 1) arr[7] = 'X'; else arr[7] = '0'; break;
-                case 9: if (player == 1) arr[8] = 'X'; else arr[8] = '0'; break;
-                default: Console.WriteLine("Error!\n"); break;
+                case 1:
+                    if (player == 1) arr[0] = 'X';
+                    else arr[0] = '0';
+                    break;
+                case 2:
+                    if (player == 1) arr[1] = 'X';
+                    else arr[1] = '0';
+                    break;
+                case 3:
+                    if (player == 1) arr[2] = 'X';
+                    else arr[2] = '0';
+                    break;
+                case 4:
+                    if (player == 1) arr[3] = 'X';
+                    else arr[3] = '0';
+                    break;
+                case 5:
+                    if (player == 1) arr[4] = 'X';
+                    else arr[4] = '0';
+                    break;
+                case 6:
+                    if (player == 1) arr[5] = 'X';
+                    else arr[5] = '0';
+                    break;
+                case 7:
+                    if (player == 1) arr[6] = 'X';
+                    else arr[6] = '0';
+                    break;
+                case 8:
+                    if (player == 1) arr[7] = 'X';
+                    else arr[7] = '0';
+                    break;
+                case 9:
+                    if (player == 1) arr[8] = 'X';
+                    else arr[8] = '0';
+                    break;
+                default:
+                    Console.WriteLine("Error!");
+                    break;
             }
         }
 
